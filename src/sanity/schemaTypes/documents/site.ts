@@ -70,7 +70,6 @@ export default defineType({
       title: 'Brand Logo',
       type: 'imageWithAlt',
       group: 'brand-logos',
-      validation: (rule) => rule.required().error('Logo is required'),
     }),
     defineField({
       name: 'logoFooter',

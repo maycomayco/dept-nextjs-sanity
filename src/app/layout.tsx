@@ -1,10 +1,10 @@
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <>
+    <html>
       {/* emoji favicon */}
       <head>
         <link
@@ -13,6 +13,6 @@ export default function RootLayout({
         />
       </head>
       <body>{children}</body>
-    </>
-  )
+    </html>
+  );
 }
