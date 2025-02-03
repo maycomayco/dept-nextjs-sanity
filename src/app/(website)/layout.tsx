@@ -8,9 +8,7 @@ export default function Layout({
   return (
     <div className="h-screen w-screen antialiased">
       <div className="flex h-full w-full flex-col">
-        <main className="flex-grow overflow-auto bg-[url(/light-bg.svg)] bg-cover bg-repeat">
-          {children}
-        </main>
+        <main className="flex-grow overflow-auto">{children}</main>
       </div>
     </div>
   );

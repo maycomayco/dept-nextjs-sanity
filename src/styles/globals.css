@@ -10,4 +10,14 @@
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  h1{
+    font-size: clamp(2.5rem, 5vw + 0.5rem, 4rem);
+  }
+}
+
+@layer utilities {
+  .debug {
+    @apply border-2 border-red-500;
+  }
 }

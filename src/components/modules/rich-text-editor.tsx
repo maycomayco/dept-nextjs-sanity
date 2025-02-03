@@ -6,8 +6,8 @@ export default function RichTextEditor({
   content: any;
 }>) {
   return (
-    <section className="section-fullwidth relative overflow-hidden text-center">
-      <div className="z-10 mx-auto max-w-screen-md">
+    <section className="text-center">
+      <div className="mx-auto max-w-screen-md">
         <PortableText value={content} />
       </div>
     </section>
