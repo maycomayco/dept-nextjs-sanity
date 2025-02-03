@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
