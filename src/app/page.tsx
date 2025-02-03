@@ -1,4 +1,4 @@
-import { isDev } from '@/lib/env';
+import { isDev } from '@/lib/is-dev';
 
 export default function Home() {
   return (
