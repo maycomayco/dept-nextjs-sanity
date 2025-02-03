@@ -62,6 +62,4 @@ export async function getSite() {
 }
 
 // Modules query
-export const modulesQuery = groq`
-	...,
-`;
+export const modulesQuery = groq`...`;

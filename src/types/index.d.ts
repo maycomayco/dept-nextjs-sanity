@@ -44,3 +44,9 @@ export type BlogPost = PageBase & {
   readingTime: number;
   metadata: Metadata;
 };
+
+type Module<T = string> = {
+  _type: T;
+  _key: string;
+  uid?: string;
+};

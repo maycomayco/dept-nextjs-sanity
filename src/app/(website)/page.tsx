@@ -1,3 +1,4 @@
+import ModulesResolver from '@/components/modules';
 import { isDev } from '@/lib/is-dev';
 import processMetadata from '@/lib/process-metadata';
 import { fetchSanity } from '@/sanity/lib/fetch';
@@ -11,7 +12,11 @@ export async function generateMetadata() {
   return processMetadata(page);
 }
 
-export default function Home() {
+export default async function Home() {
+  const page = await getPage();
+
+  console.log('🚀 ~ Home ~ page:', page);
+
   return (
     <div className="mx-auto max-w-screen-md">
       <section className="my-10 w-full rounded-lg border-2 border-black bg-white p-12 text-center">
@@ -23,6 +28,8 @@ export default function Home() {
           <code>dev environment: {isDev ? 'yes' : 'no'}</code>
         </p>
       </section>
+
+      <ModulesResolver modules={page?.modules} />
     </div>
   );
 }

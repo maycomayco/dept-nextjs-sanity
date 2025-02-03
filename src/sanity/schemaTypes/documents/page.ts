@@ -1,11 +1,11 @@
-import { defineField, defineType } from 'sanity'
 import {
+  VscEdit,
+  VscEyeClosed,
   VscHome,
   VscQuestion,
-  VscEyeClosed,
   VscSearch,
-  VscEdit,
-} from 'react-icons/vsc'
+} from 'react-icons/vsc';
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'page',
@@ -26,9 +26,7 @@ export default defineType({
       name: 'modules',
       description: 'Page content',
       type: 'array',
-      of: [
-        // { type: 'pageModule' },
-      ],
+      of: [{ type: 'rich-text-editor' }],
       options: {
         insertMenu: {
           views: [
@@ -92,4 +90,4 @@ export default defineType({
         (noindex && VscEyeClosed),
     }),
   },
-})
+});

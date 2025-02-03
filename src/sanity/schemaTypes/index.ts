@@ -1,10 +1,12 @@
-import { type SchemaTypeDefinition } from 'sanity'
-import site from './documents/site'
-import navigation from './documents/navigation'
-import imageWithAlt from './objects/imageWithAlt'
-import link from './objects/link'
-import page from './documents/page'
-import metadata from './objects/metadata'
+import { type SchemaTypeDefinition } from 'sanity';
+
+import navigation from './documents/navigation';
+import page from './documents/page';
+import site from './documents/site';
+import richTextEditor from './modules/rich-text-editor';
+import imageWithAlt from './objects/imageWithAlt';
+import link from './objects/link';
+import metadata from './objects/metadata';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -16,6 +18,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // /objects
     imageWithAlt,
     link,
-    metadata
+    metadata,
+
+    // /modules
+    richTextEditor,
   ],
-}
+};
