@@ -27,8 +27,6 @@ const navigationQuery = `
   } 
 `;
 
-// Site query
-
 const siteQuery = groq`
 *[_type == 'site'][0]{
   ...,
@@ -50,6 +48,20 @@ const siteQuery = groq`
 }
 `;
 
+export const modulesQuery = groq`...`;
+
+export const homePageQuery = groq`*[
+  _type == 'page' &&
+  metadata.slug.current=='index' 
+][0]{
+  ...,
+  modules[]{ ${modulesQuery} },
+  metadata {
+    ...,
+    'ogimage': image.asset->url + '?w=1200'
+  }
+}`;
+
 export async function getSite() {
   const data = await fetchSanity<Site>({
     query: siteQuery,
@@ -60,6 +72,3 @@ export async function getSite() {
 
   return data;
 }
-
-// Modules query
-export const modulesQuery = groq`...`;
