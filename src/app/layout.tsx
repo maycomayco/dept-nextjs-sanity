@@ -12,7 +12,7 @@ export default function RootLayout({
           rel="icon"
         />
       </head>
-      <body>{children}</body>
+      {children}
     </html>
   );
 }

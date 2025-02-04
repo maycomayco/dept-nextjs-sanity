@@ -29,10 +29,18 @@ export default defineType({
       name: 'footerMenu',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'navigation' }] }],
-      group: 'navigation',
       validation: (Rule) => Rule.max(2),
+      group: 'navigation',
       description:
         'This is the footer menu. It appears at the bottom of the page.',
+    }),
+    defineField({
+      name: 'ctas',
+      title: 'Call-to-action (Header)',
+      description: 'To be used in the header, to the right of the logo.',
+      type: 'array',
+      of: [{ type: 'cta' }],
+      group: 'navigation',
     }),
     defineField({
       name: 'social',

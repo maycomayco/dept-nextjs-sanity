@@ -50,3 +50,10 @@ type Module<T = string> = {
   _key: string;
   uid?: string;
 };
+
+export interface CTA {
+  readonly _type?: 'cta';
+  _key?: string;
+  link?: Link;
+  style?: string;
+}

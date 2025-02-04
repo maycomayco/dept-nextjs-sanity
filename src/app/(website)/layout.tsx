@@ -1,3 +1,4 @@
+import Header from '@/components/header';
 import '@/styles/globals.css';
 
 export default function Layout({
@@ -6,10 +7,12 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen w-screen antialiased">
+    <body className="h-screen w-screen antialiased">
       <div className="flex h-full w-full flex-col">
+        <Header />
+
         <main className="flex-grow overflow-auto">{children}</main>
       </div>
-    </div>
+    </body>
   );
 }

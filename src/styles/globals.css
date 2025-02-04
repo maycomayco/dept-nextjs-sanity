@@ -11,7 +11,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  h1,h2,h3,h4,h5{
+  h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{
     @apply text-balance font-medium;
   }
 
@@ -26,7 +26,7 @@
     font-size: clamp(1.5rem, 3vw + 0.3rem, 3rem);
   }
 
-  h4{
+  h4,.h4{
     font-size: clamp(1.25rem, 2.5vw + 0.2rem, 2.5rem);
   }
 
@@ -35,8 +35,34 @@
   }
 }
 
+@layer components {
+  /* CTA Base */
+  .action-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-shadow: none;
+  }
+}
+
 @layer utilities {
   .debug {
     @apply border-2 border-red-500;
+  }
+
+  /* CTA styles */
+
+  .default {
+    @apply action-base rounded border border-transparent text-balance text-white bg-neutral-800;
+  }
+
+  .outline {
+    @apply action-base border-neutral-800/10 bg-white/50 to-white text-neutral-800 rounded border text-balance;
+  }
+
+  .link {
+    @apply underline hover:decoration-2;
   }
 }
