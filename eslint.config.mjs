@@ -19,8 +19,8 @@ const eslintConfig = [
       'no-console': 'warn',
       'prefer-template': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
-      semi: 'error',
-      quotes: ['error', 'double'],
+      // semi: 'error',
+      // quotes: ['error', 'double'],
       'n/no-process-env': 'warn',
       'no-unused-vars': [
         'error',
@@ -66,7 +66,6 @@ const eslintConfig = [
           'src/**/!(__tests__)': 'KEBAB_CASE',
         },
       ],
-      'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
     },
   }),
   eslintPluginPrettierRecommended,

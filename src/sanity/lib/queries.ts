@@ -62,6 +62,19 @@ export const homePageQuery = groq`*[
   }
 }`;
 
+export const pageQuery = groq`*[
+  _type == 'page' &&
+  metadata.slug.current == $slug &&
+  !(metadata.slug.current in ['index', 'blog/*'])
+][0]{
+  ...,
+  modules[]{ ${modulesQuery} },
+  metadata {
+    ...,
+    'ogimage': image.asset->url + '?w=1200'
+  }
+}`;
+
 export async function getSite() {
   const data = await fetchSanity<Site>({
     query: siteQuery,
