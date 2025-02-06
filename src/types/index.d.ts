@@ -9,17 +9,12 @@ export type Announcement = {
 
 export type Site = {
   title: string;
-  announcements?: Announcement[];
-  ctas?: Cta[];
   headerMenu?: Navigation;
-  mainMenu?: Navigation[];
-  actionMenu: Navigation | undefined;
-  highlightMenu?: Highlight;
   footerMenu?: Navigation[];
+  ctas?: Cta[];
   social?: Navigation;
-  ogimage?: string;
   copyright?: any;
-  klaviyoSubscriptionListId?: string;
+  ogimage?: string;
   logo: ImageWithAlt;
   logoFooter: ImageWithAlt;
 };

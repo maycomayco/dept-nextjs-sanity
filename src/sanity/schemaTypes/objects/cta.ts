@@ -24,7 +24,12 @@ export default defineType({
       options: {
         layout: 'radio',
         direction: 'horizontal',
-        list: ['default', 'outline', 'link'],
+        list: [
+          'action',
+          { title: 'Outline', value: 'action-outline' },
+          'link',
+          'ghost',
+        ],
       },
       validation: (rule) => rule.required().min(1).error('This is required'),
     }),

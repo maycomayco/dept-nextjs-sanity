@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import CTAList from '@/components/cta-list';
+import Navigation from '@/components/header/navigation';
+import Toggle from '@/components/header/toggle';
+import Wrapper from '@/components/header/wrapper';
 import { cn } from '@/lib/utils';
 import { urlForImage } from '@/sanity/lib/image';
 import { getSite } from '@/sanity/lib/queries';
@@ -14,11 +17,11 @@ export default async function Header() {
   const logoUrl = urlForImage({ source: logo });
 
   return (
-    <header className="border-b border-neutral-300" role="banner">
+    <Wrapper className="border-b border-neutral-300">
       <div
         className={cn(
           css.header,
-          'mx-auto grid max-w-screen-xl items-center gap-x-4 px-4'
+          'mx-auto grid max-w-screen-xl items-center gap-x-4 p-4'
         )}
       >
         <div className="[grid-area:logo]">
@@ -36,14 +39,16 @@ export default async function Header() {
             )}
           </Link>
         </div>
-        <div className="debug [grid-area:nav]">MENU</div>
-        <div className="[grid-area:ctas]">
-          <CTAList
-            className="max-md:header-closed:hidden [grid-area:ctas] max-md:*:w-full md:ml-auto"
-            ctas={ctas}
-          />
-        </div>
+
+        <Navigation />
+
+        <CTAList
+          className="[grid-area:ctas] max-md:*:w-full max-md:header-closed:hidden md:ml-auto"
+          ctas={ctas}
+        />
+
+        <Toggle />
       </div>
-    </header>
+    </Wrapper>
   );
 }

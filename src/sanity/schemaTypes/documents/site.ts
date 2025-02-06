@@ -20,7 +20,7 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'mainMenu',
+      name: 'headerMenu',
       type: 'reference',
       to: [{ type: 'navigation' }],
       group: 'navigation',
