@@ -17,7 +17,7 @@ export default async function Header() {
   const logoUrl = urlForImage({ source: logo });
 
   return (
-    <Wrapper className="border-b border-neutral-300">
+    <Wrapper className="sticky top-0 z-10 border-b border-neutral-300 bg-white">
       <div
         className={cn(
           css.header,

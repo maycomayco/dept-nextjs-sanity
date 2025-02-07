@@ -109,4 +109,8 @@
 	.anim-fade-to-b {
 		--y: -1rem;
 	}
+
+  .opacity-gradient {
+    @apply bg-gradient-to-b from-black/0 to-black/40;
+  }
 }

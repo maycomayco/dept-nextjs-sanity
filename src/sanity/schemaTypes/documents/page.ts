@@ -26,7 +26,7 @@ export default defineType({
       name: 'modules',
       description: 'Page content',
       type: 'array',
-      of: [{ type: 'rich-text-editor' }],
+      of: [{ type: 'rich-text-editor' }, { type: 'hero' }],
       options: {
         insertMenu: {
           views: [

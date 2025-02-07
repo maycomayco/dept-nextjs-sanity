@@ -7,6 +7,17 @@ export type Announcement = {
   content: any;
 };
 
+export type CTA = {
+  readonly _type?: 'cta';
+  _key?: string;
+  link?: Link;
+};
+
+export type ImageWithAlt = SanityImageObject &
+  Partial<{
+    alt: string;
+  }>;
+
 export type Site = {
   title: string;
   headerMenu?: Navigation;
