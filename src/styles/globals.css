@@ -63,6 +63,10 @@
   .action-outline {
     @apply _cta border-neutral-800/10 text-neutral-800 rounded border;
   }
+
+  .section {
+		@apply mx-auto max-w-screen-xl p-8 max-md:px-4 md:py-12;
+	}
 }
 
 

@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 import '@/styles/globals.css';
 
@@ -12,6 +13,8 @@ export default function Layout({
         <Header />
 
         <main className="flex-grow overflow-auto">{children}</main>
+
+        <Footer />
       </div>
     </body>
   );

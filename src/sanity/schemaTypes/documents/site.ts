@@ -5,16 +5,15 @@ export default defineType({
   title: 'Site settings',
   type: 'document',
   groups: [
-    { name: 'SEO', default: true },
+    { name: 'branding', default: true },
     { name: 'navigation' },
     { name: 'miscellaneous' },
-    { name: 'brand-logos' },
   ],
   fields: [
     defineField({
       name: 'title',
       type: 'string',
-      group: 'SEO',
+      group: 'branding',
       description:
         'For the title of the website, used in the browser tab and for SEO purposes.',
       validation: (Rule) => Rule.required(),
@@ -71,20 +70,26 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      group: 'SEO',
+      group: 'miscellaneous',
     }),
     defineField({
       name: 'logo',
       title: 'Brand Logo',
       type: 'imageWithAlt',
-      group: 'brand-logos',
+      group: 'branding',
     }),
     defineField({
       name: 'logoFooter',
       title: 'Footer brand logo',
       type: 'imageWithAlt',
-      group: 'brand-logos',
+      group: 'branding',
       description: 'Used in the footer',
+    }),
+    defineField({
+      name: 'tagline',
+      type: 'array',
+      of: [{ type: 'block' }],
+      group: 'branding',
     }),
   ],
   preview: {
