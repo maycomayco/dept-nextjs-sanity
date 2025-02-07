@@ -17,6 +17,12 @@ export type Site = {
   ogimage?: string;
   logo: ImageWithAlt;
   logoFooter: ImageWithAlt;
+  tagline?: any;
+};
+
+export type Navigation = {
+  title: string;
+  items?: Link[];
 };
 
 type PageBase = SanityDocument & {
