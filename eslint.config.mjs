@@ -18,7 +18,7 @@ const eslintConfig = [
       'prefer-arrow-callback': 'error',
       'no-console': 'warn',
       'prefer-template': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off',
       // semi: 'error',
       // quotes: ['error', 'double'],
       'n/no-process-env': 'warn',

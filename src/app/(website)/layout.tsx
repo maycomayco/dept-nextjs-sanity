@@ -8,8 +8,8 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className="h-screen w-screen antialiased">
-      <div className="flex h-full w-full flex-col">
+    <body className="w-screen antialiased">
+      <div className="flex w-full flex-col">
         <Header />
 
         <main className="flex-grow overflow-auto">{children}</main>

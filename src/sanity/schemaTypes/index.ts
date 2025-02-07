@@ -3,6 +3,7 @@ import { type SchemaTypeDefinition } from 'sanity';
 import navigation from './documents/navigation';
 import page from './documents/page';
 import site from './documents/site';
+import hero from './modules/hero';
 import richTextEditor from './modules/rich-text-editor';
 import cta from './objects/cta';
 import imageWithAlt from './objects/imageWithAlt';
@@ -24,5 +25,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 
     // /modules
     richTextEditor,
+    hero,
   ],
 };
