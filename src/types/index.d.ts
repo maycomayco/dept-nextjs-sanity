@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SanityDocument } from 'next-sanity';
 
 export type Announcement = {
@@ -57,15 +56,12 @@ export type BlogPost = PageBase & {
   metadata: Metadata;
 };
 
-type Module<T = string> = {
+export type Module<T = string> = {
   _type: T;
   _key: string;
-  uid?: string;
+  options?: {
+    hidden?: boolean;
+    uid?: string;
+    customStyles?: React.CSSProperties;
+  };
 };
-
-export interface CTA {
-  readonly _type?: 'cta';
-  _key?: string;
-  link?: Link;
-  style?: string;
-}

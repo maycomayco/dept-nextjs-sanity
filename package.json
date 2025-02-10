@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "1",
+    "@sanity/ui": "^2.12.3",
     "@sanity/vision": "3",
     "clsx": "^2.1.1",
     "next": "15.1.5",
