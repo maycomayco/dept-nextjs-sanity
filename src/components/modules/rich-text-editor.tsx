@@ -1,15 +1,15 @@
+import moduleProps from '@/lib/module-props';
 import { PortableText } from 'next-sanity';
 
 export default function RichTextEditor({
   content,
+  ...props
 }: Partial<{
   content: any;
 }>) {
   return (
-    <section className="text-center">
-      <div className="mx-auto max-w-screen-md">
-        <PortableText value={content} />
-      </div>
+    <section className="section text-center" {...moduleProps(props)}>
+      <PortableText value={content} />
     </section>
   );
 }

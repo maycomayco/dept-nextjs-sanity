@@ -9,6 +9,7 @@ import cta from './objects/cta';
 import imageWithAlt from './objects/imageWithAlt';
 import link from './objects/link';
 import metadata from './objects/metadata';
+import moduleOptions from './objects/module-options';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -22,6 +23,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     link,
     metadata,
     cta,
+    moduleOptions,
 
     // /modules
     richTextEditor,

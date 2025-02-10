@@ -6,6 +6,10 @@ export default defineType({
   name: 'rich-text-editor',
   icon: TbTextCaption,
   type: 'object',
+  groups: [
+    { name: 'content', title: 'Content', default: true },
+    { name: 'options', title: 'Options' },
+  ],
   fields: [
     defineField({
       name: 'content',
@@ -35,6 +39,12 @@ export default defineType({
           },
         },
       ],
+      group: 'content',
+    }),
+    defineField({
+      name: 'options',
+      type: 'module-options',
+      group: 'options',
     }),
   ],
   preview: {
