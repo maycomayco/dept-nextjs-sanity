@@ -29,7 +29,7 @@ export default async function Hero({
   };
 
   return (
-    <div className="relative w-full">
+    <section className="relative w-full">
       <div className="relative size-full min-h-[30rem] overflow-hidden">
         {imgShape && (
           <>
@@ -83,6 +83,6 @@ export default async function Hero({
           {ctas && <CTAList className="w-full justify-center" ctas={ctas} />}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
